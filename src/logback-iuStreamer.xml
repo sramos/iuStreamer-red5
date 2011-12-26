@@ -3,7 +3,7 @@
 
 	<contextName>iuStreamer</contextName>
 	
-	<jmxConfigurator contextName="directo" />
+	<jmxConfigurator contextName="iuStreamer" />
 
 	<appender name="OFLA" class="ch.qos.logback.core.FileAppender">
 		<File>log/iuStreamer.log</File>
