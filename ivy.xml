@@ -21,5 +21,9 @@
         <dependency name="jul-to-slf4j" rev="1.5.6" />
         <dependency name="logback-core" rev="0.9.14" />
         <dependency name="logback-classic" rev="0.9.14" />
+        <!-- Xuggle -->
+        <!--<dependency org="xuggle" name="xuggle-utils" rev="latest.integration"/>
+        <dependency org="xuggle" name="xuggle-xuggler-red5" rev="latest.integration" />
+        <dependency org="xuggle" name="xuggle-xuggler" rev="[3.0,)"/>-->
     </dependencies>
 </ivy-module>

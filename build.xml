@@ -14,6 +14,7 @@
     <property name="dist.dir" value="dist"/>
 	
     <path id="project.classpath">
+        <fileset dir="lib"/>
         <fileset dir="${red5.root}/lib"/>
         <pathelement location="${red5.root}/red5.jar"/>
         <pathelement location="${red5.root}/lib/red5.jar"/>
