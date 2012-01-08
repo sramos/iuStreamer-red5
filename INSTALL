@@ -26,7 +26,8 @@ Una linea que empieza por "$" indica el prompt bash en consola.
 Indice
 1.- Instalación de dependencias
 2.- Instalación del servidor de streaming (red5)
-3.- Instalación de iuStreamer-red5 
+3.- Instalación del codificador (Xuggle)
+4.- Instalación de iuStreamer-red5 
 
 *********************************************************************************************
 
@@ -37,5 +38,7 @@ Indice
 
 2.- Instalación del servidor de streaming (red5)
 
-3.- Instalación de iuStreamer-red5
+3.- Instalación del codificador (Xuggle)
+
+4.- Instalación de iuStreamer-red5
 
