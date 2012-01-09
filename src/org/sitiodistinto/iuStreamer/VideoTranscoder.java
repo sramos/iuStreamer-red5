@@ -49,20 +49,17 @@ public class VideoTranscoder implements IVideoPictureListener {
 
   // Override methods from IVideoPictureListener
   public IVideoPicture preEncode(IVideoPicture picture) {
-    long pos = picture.getPts()/1000000;
-    if (picture.isKeyFrame() && pos > 2) {
+    if (picture.isKeyFrame() && picture.getPts()/1000000 > 2) {
       String filename = stream.getSaveFilename() + ".png";
-       if (!(new File(filename)).exists()) {
-         //IConverter converter = ConverterFactory.createConverter(stream.getName(),picture);
-         BufferedImage image = new BufferedImage(picture.getWidth(), picture.getHeight(),BufferedImage.TYPE_3BYTE_BGR);
-         IConverter converter = ConverterFactory.createConverter(image, picture.getPixelType());
-         //IConverter converter = ConverterFactory.createConverter(image, IPixelFormat.Type.BGR24);
-         if (converter != null) {
-           writeThumbnail(filename,converter.toImage(picture));
-         }
-       }
-     }
-     return picture;
+      if (!(new File(filename)).exists()) {
+        BufferedImage image = new BufferedImage(picture.getWidth(), picture.getHeight(),BufferedImage.TYPE_3BYTE_BGR);
+        IConverter converter = ConverterFactory.createConverter(image, picture.getPixelType());
+        if (converter != null) {
+          writeThumbnail(filename,converter.toImage(picture));
+        }
+      }
+    }
+    return picture;
   }
   public IVideoPicture postDecode(IVideoPicture aObject) { return aObject; }
   public IVideoPicture postResample(IVideoPicture aObject) { return aObject; }
